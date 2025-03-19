@@ -1,0 +1,17 @@
+<div>
+    <input type="radio" name="color" (click)="color='red'">Red
+    <input type="radio" name="color" (click)="color='green'">Green
+    <input type="radio" name="color" (click)="color='blue'">Blue
+</div>
+<h2 [appMoml]="color">Tasks to be done</h2>
+<div *ngFor="let task of tasks" >
+    <div *ngIf="task.status === 'todo'">
+        <span>* {{task.title}}</span>
+    </div>
+</div>
+<h2 [appMoml]="color">Tasks completed</h2>
+<div *ngFor="let task of tasks" >
+    <div *ngIf="task.status === 'complete'">
+        <span>* {{task.title}}</span>
+    </div>
+</div>
