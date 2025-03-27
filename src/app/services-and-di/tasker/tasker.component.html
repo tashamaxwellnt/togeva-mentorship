@@ -2,7 +2,7 @@
     <div class="content">
         <p>Managing your tasks carefully is our priority</p>
         <div class="input">
-            <input type="text" [(ngModel)]="task" placeholder="Enter a task">
+            <input type="text" [(ngModel)]="task" (keyup.enter)="addTask()" placeholder="Enter a task">
             <button (click)="addTask()">Add</button>
         </div>
         <div class="task-c">
