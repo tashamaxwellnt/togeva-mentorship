@@ -7,6 +7,6 @@ import { Directive, ElementRef } from '@angular/core';
 export class EnlargeDirective {
 
   constructor(private er: ElementRef) {
-    this.er.nativeElement.style.fontSize = '30px'
+    this.er.nativeElement.style.fontSize = '30px';
   }
 }

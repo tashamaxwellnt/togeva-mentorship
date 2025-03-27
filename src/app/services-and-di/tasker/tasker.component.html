@@ -1,0 +1,17 @@
+<div class="home">
+    <div class="content">
+        <p>Managing your tasks carefully is our pleasure</p>
+        <div class="input">
+            <input type="text" [(ngModel)]="task" placeholder="Enter a task">
+            <button (click)="addTask()">Add</button>
+        </div>
+        <div class="task-c">
+            @for (task of tasks; track $index) {
+                <div class="task">
+                    <span>{{ $index + 1 }}. {{ task }}</span>
+                    <button (click)="remove($index)">X</button>
+                </div>
+            }
+        </div>
+    </div>
+</div>
